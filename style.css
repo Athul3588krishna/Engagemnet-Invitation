@@ -580,6 +580,38 @@ body::before {
   text-shadow: 0 2px 8px rgba(197, 155, 39, 0.4);
 }
 
+/* Parents & Family Lineage Typography */
+.parents-detail {
+  margin-top: 6px;
+  padding: 4px 10px;
+}
+
+.parents-ml {
+  font-family: var(--font-malayalam);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.parents-place {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  letter-spacing: 1px;
+  margin: 3px 0;
+  text-transform: uppercase;
+}
+
+.parents-en {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 1px;
+}
+
 /* Short Traditional Invitation Message */
 .invitation-intro {
   max-width: 480px;
