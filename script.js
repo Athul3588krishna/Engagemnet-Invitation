@@ -67,12 +67,14 @@ function initMusicPlayer() {
   const musicBanner = document.getElementById('music-banner');
   const audioEl = document.getElementById('bg-audio');
 
+  const MAX_MUSIC_DURATION_SEC = 30;
   let isPlaying = false;
   let audioCtx = null;
   let synthRunning = false;
   let synthInterval = null;
   let masterGain = null;
   let activeNodes = [];
+  let autoStopTimer = null;
 
   // Traditional Raga Mohanam Frequencies (Key of C = Sa)
   const SWARAS = {
@@ -305,41 +307,99 @@ function initMusicPlayer() {
     }
   }
 
+  // Helper to completely stop all music playback immediately
+  function stopPlayback() {
+    if (autoStopTimer) {
+      clearTimeout(autoStopTimer);
+      autoStopTimer = null;
+    }
+
+    if (audioEl) {
+      try {
+        audioEl.pause();
+        audioEl.currentTime = 0;
+      } catch (e) {}
+    }
+
+    stopSynthMusic();
+
+    if (audioCtx && audioCtx.state === 'running') {
+      try { audioCtx.suspend(); } catch (e) {}
+    }
+
+    isPlaying = false;
+    updateMusicUI(false);
+  }
+
+  // Helper to start playback capped at 30 seconds
+  function startPlayback() {
+    if (isPlaying) return;
+
+    if (autoStopTimer) {
+      clearTimeout(autoStopTimer);
+    }
+
+    // Automatically stop music after 30 seconds
+    autoStopTimer = setTimeout(() => {
+      stopPlayback();
+    }, MAX_MUSIC_DURATION_SEC * 1000);
+
+    let playedViaElement = false;
+    if (audioEl) {
+      audioEl.volume = 0.6;
+      audioEl.currentTime = 0;
+      const playPromise = audioEl.play();
+      if (playPromise !== undefined) {
+        playedViaElement = true;
+        playPromise.then(() => {
+          isPlaying = true;
+          updateMusicUI(true);
+        }).catch((err) => {
+          console.log('HTML5 Audio play failed, falling back to Web Audio synthesizer:', err);
+          startSynthMusic();
+          isPlaying = true;
+          updateMusicUI(true);
+        });
+      }
+    }
+
+    if (!playedViaElement) {
+      startSynthMusic();
+      isPlaying = true;
+      updateMusicUI(true);
+    }
+  }
+
   // Toggle Function
   function togglePlay() {
     if (!isPlaying) {
-      let playedViaElement = false;
-      if (audioEl) {
-        audioEl.volume = 0.6;
-        const playPromise = audioEl.play();
-        if (playPromise !== undefined) {
-          playedViaElement = true;
-          playPromise.then(() => {
-            isPlaying = true;
-            updateMusicUI(true);
-          }).catch((err) => {
-            console.log('HTML5 Audio play failed, falling back to Web Audio synthesizer:', err);
-            startSynthMusic();
-            isPlaying = true;
-            updateMusicUI(true);
-          });
-        }
-      }
-
-      if (!playedViaElement) {
-        startSynthMusic();
-        isPlaying = true;
-        updateMusicUI(true);
-      }
+      startPlayback();
     } else {
-      if (audioEl) {
-        try { audioEl.pause(); } catch(e) {}
-      }
-      stopSynthMusic();
-      isPlaying = false;
-      updateMusicUI(false);
+      stopPlayback();
     }
   }
+
+  // Hard stop at 30 seconds if playing HTML5 audio
+  if (audioEl) {
+    audioEl.addEventListener('timeupdate', () => {
+      if (audioEl.currentTime >= MAX_MUSIC_DURATION_SEC) {
+        stopPlayback();
+      }
+    });
+    audioEl.addEventListener('ended', stopPlayback);
+  }
+
+  // CRITICAL: Stop music immediately when user hits back, switches tabs, minimizes or leaves
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopPlayback();
+    }
+  });
+
+  window.addEventListener('pagehide', stopPlayback);
+  window.addEventListener('popstate', stopPlayback);
+  window.addEventListener('beforeunload', stopPlayback);
+  window.addEventListener('unload', stopPlayback);
 
   function updateMusicUI(active) {
     if (active) {
@@ -383,7 +443,8 @@ function initMusicPlayer() {
   window.addEventListener('touchstart', autoPlayTrigger, { once: true });
 
   return {
-    play: () => { if (!isPlaying) togglePlay(); },
+    play: () => { if (!isPlaying) startPlayback(); },
+    stop: stopPlayback,
     togglePlay: togglePlay,
     isPlaying: () => isPlaying
   };
