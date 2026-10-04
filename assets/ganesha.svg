@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF953F" />
+      <stop offset="25%" stop-color="#FCF6BA" />
+      <stop offset="50%" stop-color="#B38728" />
+      <stop offset="75%" stop-color="#FBF5B7" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Prabhavali / Radiant Aura -->
+  <circle cx="100" cy="115" r="90" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.6"/>
+  <circle cx="100" cy="115" r="82" fill="none" stroke="url(#goldGrad)" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Crown (Kireedam) -->
+  <path d="M78 52 L100 12 L122 52 L112 55 L100 30 L88 55 Z" fill="url(#goldGrad)" />
+  <circle cx="100" cy="10" r="3.5" fill="url(#goldGrad)" filter="url(#goldGlow)" />
+  <path d="M72 58 Q100 48 128 58 Q100 54 72 58 Z" fill="url(#goldGrad)" />
+  <circle cx="100" cy="40" r="2.5" fill="#8B0000" />
+
+  <!-- Sacred Tilak -->
+  <path d="M96 68 Q100 60 104 68 Q100 84 96 68 Z" fill="#8B0000" />
+  <circle cx="100" cy="74" r="2" fill="url(#goldGrad)" />
+  <line x1="88" y1="65" x2="112" y2="65" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+  <line x1="90" y1="62" x2="110" y2="62" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" />
+
+  <!-- Forehead and Ears -->
+  <!-- Left Ear -->
+  <path d="M68 64 Q32 60 40 92 Q48 116 70 108" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M50 78 Q44 94 56 102" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <!-- Right Ear -->
+  <path d="M132 64 Q168 60 160 92 Q152 116 130 108" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M150 78 Q156 94 144 102" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Left Tusk (Full) -->
+  <path d="M80 115 L66 120 L76 123 Z" fill="url(#goldGrad)" />
+  <!-- Right Tusk (Broken - traditional Ekadanta) -->
+  <path d="M120 115 L128 118 L122 120 Z" fill="url(#goldGrad)" />
+
+  <!-- Eyes -->
+  <path d="M78 82 Q85 80 92 84" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+  <circle cx="85" cy="84" r="1.5" fill="#2C1E18" />
+  <path d="M122 82 Q115 80 108 84" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" />
+  <circle cx="115" cy="84" r="1.5" fill="#2C1E18" />
+
+  <!-- Head Outline & Trunk (Curling Auspiciously with Modak) -->
+  <path d="M74 68 Q100 62 126 68" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" />
+  
+  <!-- Trunk flowing down and gently curving left/up holding Modak -->
+  <path d="M92 92 Q88 125 90 148 Q92 172 108 178 Q125 182 128 165 Q130 150 118 148 Q106 146 104 156" 
+        fill="none" stroke="url(#goldGrad)" stroke-width="4.5" stroke-linecap="round" />
+  
+  <!-- Trunk Bell / Ornamentation -->
+  <path d="M92 125 Q98 128 104 125" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+  <path d="M93 133 Q98 136 105 133" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+  
+  <!-- Auspicious Modak (Sweet) -->
+  <path d="M124 146 C124 140, 134 140, 134 146 C134 154, 124 154, 124 146 Z" fill="url(#goldGrad)" filter="url(#goldGlow)" />
+  <circle cx="129" cy="142" r="1" fill="#8B0000" />
+
+  <!-- Body Silhouette / Bell-shaped Auspicious Posture -->
+  <!-- Left Hand / Abhaya Mudra (Blessing) -->
+  <path d="M46 140 Q38 128 44 118 Q50 126 56 135" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="42" cy="126" r="3" fill="#8B0000" opacity="0.6"/>
+  <!-- Right Hand holding Trishula/Ankusha -->
+  <path d="M154 140 Q162 128 156 118 Q150 126 144 135" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Lower Torso & Base Lotus Petals -->
+  <path d="M60 160 Q50 190 85 200 Q100 203 115 200 Q150 190 140 160" fill="none" stroke="url(#goldGrad)" stroke-width="2" opacity="0.5" />
+  
+  <!-- Base Lotus Platform -->
+  <path d="M40 215 C60 200, 80 208, 100 212 C120 208, 140 200, 160 215 C145 224, 125 226, 100 226 C75 226, 55 224, 40 215 Z" fill="url(#goldGrad)" opacity="0.9" />
+  <path d="M55 222 C70 232, 100 235, 100 235 C100 235, 130 232, 145 222" fill="none" stroke="url(#goldGrad)" stroke-width="2" />
+</svg>

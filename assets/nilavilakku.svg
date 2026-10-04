@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 320" width="100%" height="100%">
+  <defs>
+    <!-- Brass / Kasavu Gold Gradient -->
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9A7B2C" />
+      <stop offset="25%" stop-color="#E5C158" />
+      <stop offset="45%" stop-color="#FFF2A1" />
+      <stop offset="70%" stop-color="#C69B30" />
+      <stop offset="100%" stop-color="#735216" />
+    </linearGradient>
+
+    <!-- Warm Flame Gradient -->
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF3B00" />
+      <stop offset="35%" stop-color="#FF8C00" />
+      <stop offset="70%" stop-color="#FFD700" />
+      <stop offset="95%" stop-color="#FFFFE0" />
+    </linearGradient>
+
+    <!-- Flame Glow -->
+    <radialGradient id="flameGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(255, 215, 0, 0.9)" />
+      <stop offset="40%" stop-color="rgba(255, 140, 0, 0.5)" />
+      <stop offset="80%" stop-color="rgba(255, 69, 0, 0.15)" />
+      <stop offset="100%" stop-color="rgba(255, 69, 0, 0)" />
+    </radialGradient>
+
+    <filter id="lampGlowFilter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes flickerAnim {
+        0%, 100% {
+          transform: scale(1) translate(0, 0);
+          opacity: 0.95;
+        }
+        25% {
+          transform: scale(1.05, 0.96) translate(-0.5px, -1px);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(0.97, 1.04) translate(0.5px, 0.5px);
+          opacity: 0.9;
+        }
+        75% {
+          transform: scale(1.03, 0.98) translate(-0.3px, -0.5px);
+          opacity: 0.98;
+        }
+      }
+      .flame-flckr {
+        transform-origin: 60px 42px;
+        animation: flickerAnim 1.6s ease-in-out infinite alternate;
+      }
+      .glow-pulse {
+        animation: flickerAnim 2.2s ease-in-out infinite alternate;
+      }
+    </style>
+  </defs>
+
+  <!-- Large Flame Glow Aura -->
+  <circle class="glow-pulse" cx="60" cy="38" r="34" fill="url(#flameGlow)" />
+
+  <!-- Top Crown Flame (Central Main Wick) -->
+  <g class="flame-flckr" filter="url(#lampGlowFilter)">
+    <!-- Outer Flame -->
+    <path d="M60 44 C53 44 48 37 53 26 C57 18 60 8 60 8 C60 8 63 18 67 26 C72 37 67 44 60 44 Z" fill="url(#flameGrad)" />
+    <!-- Inner Core Flame -->
+    <path d="M60 42 C56 42 53 37 56 30 C58 24 60 16 60 16 C60 16 62 24 64 30 C67 37 64 42 60 42 Z" fill="#FFFFF0" opacity="0.85" />
+  </g>
+
+  <!-- Small side wicks flames -->
+  <g class="flame-flckr" style="animation-delay: 0.4s;">
+    <path d="M38 52 C35 52 32 48 35 42 C38 37 40 30 40 30 C40 30 42 37 44 42 C47 48 44 52 40 52 Z" fill="url(#flameGrad)" transform="rotate(-18 38 52) scale(0.65)" />
+  </g>
+  <g class="flame-flckr" style="animation-delay: 0.7s;">
+    <path d="M82 52 C79 52 76 48 79 42 C82 37 84 30 84 30 C84 30 86 37 88 42 C91 48 88 52 84 52 Z" fill="url(#flameGrad)" transform="rotate(18 82 52) scale(0.65)" />
+  </g>
+
+  <!-- Brass Lamp Body -->
+  <!-- Top Finial / Makudam Tip -->
+  <path d="M57 44 L63 44 L61 40 L59 40 Z" fill="url(#brassGrad)" />
+  <circle cx="60" cy="46" r="3.5" fill="url(#brassGrad)" />
+  
+  <!-- Upper Oil Plate (Thattu) -->
+  <ellipse cx="60" cy="56" rx="30" ry="6.5" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="54" rx="27" ry="5" fill="#694C16" />
+  <ellipse cx="60" cy="53" rx="24" ry="4" fill="url(#brassGrad)" />
+  <!-- Oil Rim Ribs / Spouts -->
+  <circle cx="34" cy="56" r="2" fill="url(#brassGrad)" />
+  <circle cx="86" cy="56" r="2" fill="url(#brassGrad)" />
+  <circle cx="60" cy="59" r="2.5" fill="url(#brassGrad)" />
+
+  <!-- Upper Stem Knop -->
+  <path d="M54 62 L66 62 L63 78 L57 78 Z" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="78" rx="8" ry="4.5" fill="url(#brassGrad)" />
+  <circle cx="60" cy="85" r="7" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="92" rx="8" ry="4.5" fill="url(#brassGrad)" />
+
+  <!-- Mid Column (Fluted Pillar) -->
+  <path d="M56 94 L64 94 L63 150 L57 150 Z" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="120" rx="6" ry="2.5" fill="url(#brassGrad)" />
+
+  <!-- Central Large Knop (Kumbil) -->
+  <ellipse cx="60" cy="154" rx="14" ry="7" fill="url(#brassGrad)" />
+  <circle cx="60" cy="164" r="11" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="174" rx="14" ry="7" fill="url(#brassGrad)" />
+
+  <!-- Lower Pillar -->
+  <path d="M55 178 L65 178 L63 230 L57 230 Z" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="204" rx="7.5" ry="3" fill="url(#brassGrad)" />
+
+  <!-- Pedestal Transition Rings -->
+  <ellipse cx="60" cy="232" rx="16" ry="5.5" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="240" rx="22" ry="7" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="250" rx="28" ry="8.5" fill="url(#brassGrad)" />
+
+  <!-- Stepped Lotus Base (Aadhaaram) -->
+  <path d="M30 252 C30 264, 42 278, 60 280 C78 278, 90 264, 90 252 Z" fill="url(#brassGrad)" />
+  <!-- Base Lotus Carvings -->
+  <ellipse cx="60" cy="282" rx="36" ry="11" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="294" rx="44" ry="13" fill="url(#brassGrad)" />
+  <path d="M14 294 C14 308, 32 314, 60 314 C88 314, 106 308, 106 294 Z" fill="url(#brassGrad)" />
+  <ellipse cx="60" cy="308" rx="48" ry="10" fill="#5A3F0E" opacity="0.8" />
+  <ellipse cx="60" cy="306" rx="46" ry="9" fill="url(#brassGrad)" />
+
+  <!-- Base Highlight Shading -->
+  <path d="M22 296 C32 305, 50 309, 60 309 C70 309, 88 305, 98 296" stroke="#FFF2A1" stroke-width="2" fill="none" opacity="0.6" />
+</svg>

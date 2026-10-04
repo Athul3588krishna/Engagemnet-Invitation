@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 24" width="240" height="24" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="kasavuGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#AA771C" />
+      <stop offset="30%" stop-color="#FCF6BA" />
+      <stop offset="60%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#8F6211" />
+    </linearGradient>
+  </defs>
+
+  <!-- Top gold border band -->
+  <rect x="0" y="0" width="240" height="2.5" fill="url(#kasavuGold)" />
+  <rect x="0" y="3.5" width="240" height="1" fill="#7A1526" opacity="0.6"/>
+
+  <!-- Repeating Kasavu temple triangles / chevrons (12 triangles across 240px: each 20px wide) -->
+  <g fill="url(#kasavuGold)">
+    <polygon points="0,18 10,6 20,18" />
+    <polygon points="20,18 30,6 40,18" />
+    <polygon points="40,18 50,6 60,18" />
+    <polygon points="60,18 70,6 80,18" />
+    <polygon points="80,18 90,6 100,18" />
+    <polygon points="100,18 110,6 120,18" />
+    <polygon points="120,18 130,6 140,18" />
+    <polygon points="140,18 150,6 160,18" />
+    <polygon points="160,18 170,6 180,18" />
+    <polygon points="180,18 190,6 200,18" />
+    <polygon points="200,18 210,6 220,18" />
+    <polygon points="220,18 230,6 240,18" />
+  </g>
+
+  <!-- Tiny dots inside triangles -->
+  <g fill="#7A1526" opacity="0.8">
+    <circle cx="10" cy="13" r="1.2" />
+    <circle cx="30" cy="13" r="1.2" />
+    <circle cx="50" cy="13" r="1.2" />
+    <circle cx="70" cy="13" r="1.2" />
+    <circle cx="90" cy="13" r="1.2" />
+    <circle cx="110" cy="13" r="1.2" />
+    <circle cx="130" cy="13" r="1.2" />
+    <circle cx="150" cy="13" r="1.2" />
+    <circle cx="170" cy="13" r="1.2" />
+    <circle cx="190" cy="13" r="1.2" />
+    <circle cx="210" cy="13" r="1.2" />
+    <circle cx="230" cy="13" r="1.2" />
+  </g>
+
+  <!-- Bottom gold border band -->
+  <rect x="0" y="19" width="240" height="1" fill="#7A1526" opacity="0.6"/>
+  <rect x="0" y="21" width="240" height="3" fill="url(#kasavuGold)" />
+</svg>

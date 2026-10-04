@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bananaLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#40916C" />
+      <stop offset="35%" stop-color="#2D6A4F" />
+      <stop offset="70%" stop-color="#1B4332" />
+      <stop offset="100%" stop-color="#081C15" />
+    </linearGradient>
+    <linearGradient id="midribGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#74C69D" />
+      <stop offset="100%" stop-color="#2D6A4F" />
+    </linearGradient>
+  </defs>
+
+  <!-- Traditional Vazhayila (Kerala Banana Leaf) curved shape -->
+  <path d="M50,195 C45,180 30,150 15,115 C2,82 5,45 28,15 C38,2 48,0 50,0 C52,0 62,2 72,15 C95,45 98,82 85,115 C70,150 55,180 50,195 Z" 
+        fill="url(#bananaLeafGrad)" opacity="0.85" />
+  
+  <!-- Central Midrib (Vein) -->
+  <path d="M50,0 C50,60 50,140 50,198" stroke="url(#midribGrad)" stroke-width="3" fill="none" stroke-linecap="round" />
+
+  <!-- Lateral Veins Left -->
+  <path d="M50,20 Q35,28 20,40" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,45 Q30,55 12,72" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,75 Q28,88 8,110" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,105 Q30,120 12,142" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,135 Q32,150 22,170" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+
+  <!-- Lateral Veins Right -->
+  <path d="M50,20 Q65,28 80,40" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,45 Q70,55 88,72" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,75 Q72,88 92,110" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,105 Q70,120 88,142" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+  <path d="M50,135 Q68,150 78,170" stroke="#52B788" stroke-width="1.2" fill="none" opacity="0.5" />
+</svg>

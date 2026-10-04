@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 90" width="100%" height="100%" preserveAspectRatio="none">
+  <defs>
+    <!-- Mango Leaf Gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D6A4F" />
+      <stop offset="50%" stop-color="#1B4D3E" />
+      <stop offset="100%" stop-color="#0F2D24" />
+    </linearGradient>
+    <linearGradient id="leafLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#52B788" />
+      <stop offset="100%" stop-color="#2D6A4F" />
+    </linearGradient>
+    <!-- Marigold Gradient -->
+    <radialGradient id="marigoldOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE066" />
+      <stop offset="45%" stop-color="#FF922B" />
+      <stop offset="100%" stop-color="#E8590C" />
+    </radialGradient>
+    <!-- Gold Cord Gradient -->
+    <linearGradient id="cordGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#AA771C" />
+      <stop offset="50%" stop-color="#FCF6BA" />
+      <stop offset="100%" stop-color="#AA771C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Top Auspicious Gold Cord -->
+  <line x1="0" y1="4" x2="1000" y2="4" stroke="url(#cordGrad)" stroke-width="3.5" />
+  <line x1="0" y1="7" x2="1000" y2="7" stroke="#7A1526" stroke-width="1.5" stroke-dasharray="8,4" />
+
+  <!-- Repeated Toran Segments across 1000px (10 segments of 100px each) -->
+  <!-- We define a template group and repeat -->
+  <g id="toran-row">
+    <!-- Loop through 10 units -->
+    <!-- Unit 0 -->
+    <g transform="translate(0, 4)">
+      <!-- Swag garland rope -->
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round" filter="drop-shadow(0 2px 2px rgba(0,0,0,0.15))"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <!-- Mango Leaf Center -->
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <!-- Side leaves -->
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <!-- Marigold Knot at center -->
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <!-- Jasmine drop -->
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <!-- Jasmine clusters at ends -->
+      <circle cx="0" cy="2" r="6" fill="url(#marigoldOrange)" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <!-- Repeat for units 100 to 900 -->
+    <g transform="translate(100, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(200, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(300, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(400, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(500, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(600, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(700, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(800, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+    <g transform="translate(900, 4)">
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFFFF0" stroke-width="5" stroke-linecap="round"/>
+      <path d="M0,0 Q50,30 100,0" fill="none" stroke="#FFF9DB" stroke-width="3" stroke-dasharray="4,6" />
+      <path d="M50,15 C42,28 35,48 50,75 C65,48 58,28 50,15 Z" fill="url(#leafGrad)" />
+      <path d="M50,15 L50,70" stroke="#74C69D" stroke-width="1" opacity="0.6"/>
+      <path d="M48,16 C36,25 24,40 32,58 C42,42 46,26 48,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <path d="M52,16 C64,25 76,40 68,58 C58,42 54,26 52,16 Z" fill="url(#leafLightGrad)" opacity="0.9" />
+      <circle cx="50" cy="22" r="7.5" fill="url(#marigoldOrange)" />
+      <circle cx="50" cy="22" r="4" fill="#FFE066" />
+      <circle cx="50" cy="34" r="3" fill="#FFFFFF" />
+      <circle cx="50" cy="42" r="3.5" fill="#FFFFFF" />
+      <circle cx="50" cy="50" r="3" fill="#FFFBEA" />
+      <circle cx="100" cy="2" r="6" fill="url(#marigoldOrange)" />
+    </g>
+  </g>
+</svg>
