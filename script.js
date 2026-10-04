@@ -511,7 +511,7 @@ function initPetalsCanvas() {
       e.stopPropagation();
       petalsEnabled = !petalsEnabled;
       toggleBtn.style.opacity = petalsEnabled ? '1' : '0.5';
-      showToast(petalsEnabled ? 'പൂക്കളുടെ വർഷം ഓൺ ചെയ്തു (Petals On)' : 'പൂക്കളുടെ വർഷം ഓഫ് ചെയ്തു (Petals Off)');
+      showToast(petalsEnabled ? 'പൂമഴ ഓൺ ചെയ്തു (Petals On)' : 'പൂമഴ ഓഫ് ചെയ്തു (Petals Off)');
       if (petalsEnabled && !animationId) {
         render();
       }
@@ -589,7 +589,7 @@ function initCalendarAndSharing() {
         `👰 വധു: ശ്യാമ (D/o Late ശശീന്ദ്രൻ & പ്രസന്ന, തൃശ്ശൂർ)\n\n` +
         `ഈശ്വരാനുഗ്രഹത്തോടും മാതാപിതാക്കളുടെയും കുടുംബാംഗങ്ങളുടെയും സ്നേഹാശിസ്സുകളോടും കൂടി നടക്കുന്ന വിവാഹനിശ്ചയ മംഗളവേളയിലേക്ക് താങ്കളെയും കുടുംബത്തെയും ഹൃദയപൂർവ്വം ക്ഷണിക്കുന്നു.\n\n` +
         `📅 *തീയതി:* 24 October 2026 (ശനിയാഴ്ച)\n` +
-        `⏰ *മുഹൂർത്തം:* 11:45 AM – 12:30 PM\n` +
+        `⏰ *മുഹൂർത്തം:* രാവിലെ 11:45-നും 12:30-നും ഇടയിൽ\n` +
         `📍 *വേദി:* ചേർപ്പ് പഞ്ചായത്ത് കമ്മ്യൂണിറ്റി ഹാൾ, തൃശ്ശൂർ\n` +
         `🗺️ *ലൊക്കേഷൻ മാപ്പ്:* https://maps.app.goo.gl/Rez7Ggz4M6VoMRLx5\n\n` +
         `ഡിജിറ്റൽ ക്ഷണക്കത്ത് കാണാൻ ഈ ലിങ്ക് സന്ദർശിക്കുക:\n${pageUrl}`;
